@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg_color"
+    android:orientation="vertical" >
+	<TabHost 
+    	android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/tabHost">
+		<HorizontalScrollView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:fillViewport="true"
+	        android:scrollbars="none" >
+			<TabWidget 
+	        	android:id="@android:id/tabs" 
+	          	android:layout_width="fill_parent" 
+	          	android:layout_height="wrap_content" />
+		</HorizontalScrollView>
+	    <FrameLayout 
+	    	android:id="@android:id/tabcontent" 
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:paddingTop="50dp"
+	        android:layout_marginBottom="60dp">  
+	        <ListView
+	        	android:id = "@+id/danhsach"
+	            android:layout_width="fill_parent" 
+	            android:layout_height="fill_parent"/>
+	     </FrameLayout> 
+	     <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:layout_marginTop="100dp"
+	        android:background="@drawable/item_pressed"
+	        android:baselineAligned="true"
+	        android:layout_gravity="bottom"
+	        android:gravity="bottom"
+	        android:orientation="horizontal">
+	         <LinearLayout
+	             android:id="@+id/item_details_cart_layout"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             android:layout_weight="1"
+	             android:gravity="left"
+	             android:orientation="horizontal"
+	             android:background="@drawable/item_pressed"
+	             android:paddingTop="7dp" >
+	             <Button
+	                 android:layout_width="25dp"
+	                 android:layout_height="25dp"
+	                 android:layout_alignParentTop="true"
+	                 android:layout_centerHorizontal="true"
+	                 android:layout_centerInParent="true"
+	                 android:layout_gravity="center"
+	                 android:layout_marginLeft="10dp"
+	                 android:background="@drawable/cart"
+	                 android:gravity="center"
+	                 android:textColor="@color/form_elmnt_color"
+	                 android:textSize="@dimen/body_text" />
+	             <TextView
+	                 android:id="@+id/item_details_cart_items_qty"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="0 Itm"
+	                android:background="@drawable/item_pressed"
+	                android:textStyle="bold"
+	                android:textSize="@dimen/search_bar_text"
+	                android:textColor="@color/form_elmnt_color"
+	                android:gravity="left" />
+	         </LinearLayout>
+	        <LinearLayout
+	            android:id="@+id/item_details_sub_total_layout"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center"
+	            android:gravity="center"
+	            android:layout_marginLeft="1dp"
+	            android:layout_weight="1"
+	            android:orientation="horizontal"
+	            android:paddingTop="7dp">
+	            <TextView
+	                android:id="@+id/item_details_sub_total_text"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Sub Total \n ₹  0"
+	                android:textSize="@dimen/search_bar_text"
+	                android:textColor="@color/form_elmnt_color"
+	                android:layout_gravity="center"
+	                android:gravity="center" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:gravity="right"
+	            android:layout_marginLeft="1dp"
+	            android:layout_weight="1"
+	            android:orientation="horizontal"
+	            android:paddingTop="7dp" >
+	            <Button
+	                android:id="@+id/item_details_checkout_layout"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="wrap_content"
+	                 android:layout_alignParentTop="true"
+	                 android:layout_centerHorizontal="true"
+	                 android:layout_centerInParent="true"
+	                 android:layout_gravity="right"
+	                 android:layout_marginLeft="10dp"
+	                 android:background="@drawable/item_pressed"
+	                 android:gravity="center"
+	                 android:text="Next"
+	                 android:textColor="@color/form_elmnt_color"
+	                 android:textSize="@dimen/body_text" />
+	        </LinearLayout>
+	    </LinearLayout>
+	</TabHost>
+</LinearLayout>

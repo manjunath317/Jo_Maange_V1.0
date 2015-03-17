@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jo Maange</string>
+    <string name="caption_label">Your Personal Delivery Boy</string>
+    <string name="action_settings">Settings</string>
+    <string name="internt_connection_error_msg">Please turn on internet settings</string>
+    <string name="gps_connection_error_msg">Please turn on location settings</string>
+    <string name="place_order_label">Place Order</string>
+    <string name="past_orders_label">Past Orders</string>
+    <string name="order_status_label">Order Status</string>
+    <string name="notifications_label">Notifications</string>
+    <string name="faq_label">FAQ</string>
+    <string name="contact_us_label">Contact Us</string>
+    <string name="contact_us_phone">080-668-888-88</string>
+    <string name="contact_us_address">JoMaange Innovative Market Solutions Pvt. Ltd. #50, 2nd Floor, Hennur Main road, Kachakaranahalli, Bangalore - 560038.\n\nLandmark: Opp Jyothi School Bus Stop</string>
+    <string name="contact_us_email">support@jomaange.com</string>
+    <string name="contact_us_text1">Got something to say our team? Be it a bug or about a query or a restaurant you want us to feature, write us an email. We will reach you shortly.</string>
+    <string name="contact_us_email_btn_label">Email Us</string>
+    <string name="search_box_label">Search Restaurants and Dishes</string>
+    <string name="user_details_full_name">Full Name</string>
+    <string name="user_details_email_id">Email ID</string>
+    <string name="user_details_phone_country_code">+91</string>
+    <string name="user_details_contact_number">Contact Number</string>
+    <string name="user_details_terms_text1">I agree for</string>
+    <string name="user_details_terms_text2">Terms and Conditions</string>
+    <string name="user_details_verification_text">You may receive a verification call</string>
+    <string name="btn_next_label">Next</string>
+    <string name="sms_verification_label1">Waiting to detect an SMS code sent to</string>
+    <string name="sms_verification_label2">OR</string>
+    <string name="sms_verification_label3">You can enter the code manually</string>
+    <string name="sms_verification_enter_code">Enter Code</string>
+    <string name="add_address_edit_text1">House No / Floor / Street</string>
+    <string name="add_address_edit_text2">Area / Landmark</string>
+    <string name="add_address_edit_text3">Location</string>
+    <string name="order_details_text1">Total outstanding amount for your order</string>
+    <string name="order_details_text2">Enter Promotion Code if you have</string>
+    <string name="order_details_text3">Bring me change of</string>
+    <string name="order_details_apply_promotion_code">Apply</string>
+    <string name="order_details_promotion_code">Promotion Code</string>
+    <string name="order_details_confirm_btn">Confirm Order</string>
+    <string name="choose_location_label">Choose Location</string>
+    <string name="tell_us_your_details_label">Tell Us Your Details</string>
+    <string name="sms_verification_label">SMS Verification</string>
+    <string name="add_address_label">Add Address</string>
+    <string name="order_details_label">Order Details</string>
+    <string name="order_placed_label">Order Placed</string>
+    <string name="city_location_search_label">Search Location</string>
+    <string name="entity_details">Restaurant Details</string>
+    <string name="cart_title">My Cart</string>
+    <string name="entity_results">Search Results</string>
+    
+    
+    
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >@string/place_order_label</item>
+        <item >@string/past_orders_label</item>
+        <item >@string/order_status_label</item>
+        <item >@string/notifications_label</item>
+        <item >@string/faq_label</item>
+        <item >@string/contact_us_label</item>
+    </string-array>
+     
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_place_order</item>
+        <item>@drawable/ic_past_order</item>
+        <item>@drawable/ic_order_status</item>
+        <item>@drawable/ic_notifications</item>
+        <item>@drawable/ic_faq</item>
+        <item>@drawable/ic_contact_us</item>
+    </array>
+
+</resources>

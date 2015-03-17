@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_common"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/entity_details_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegetable Kadai"
+                android:textSize="@dimen/body_text"
+                android:textColor="@color/form_elmnt_color"
+                android:gravity="left" />
+            <TextView
+                android:id="@+id/entity_details_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Price : 200 ₹"
+                android:textSize="@dimen/search_bar_text"
+                android:textColor="@color/form_elmnt_color"
+                android:gravity="left" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/entity_details_item_qty_add"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_gravity="left"
+            	android:gravity="left"
+	            android:background="@drawable/item_pressed">
+            	<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/add_qty_icon"/>
+            </LinearLayout>
+            <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_gravity="center"
+            	android:gravity="center">
+            	<TextView
+                android:id="@+id/entity_details_item_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/form_elmnt_color"
+                android:textSize="@dimen/big_text1" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/entity_details_item_qty_less"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/item_pressed"
+	            android:orientation="horizontal" 
+	            android:layout_gravity="right"
+            	android:gravity="right">
+            	<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/less_qty_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

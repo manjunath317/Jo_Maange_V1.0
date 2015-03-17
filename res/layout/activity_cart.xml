@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg_color"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/item_details_sub_total_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sub Total \n ₹  0"
+        android:textSize="@dimen/search_bar_text"
+        android:textColor="@color/form_elmnt_color"
+        android:layout_gravity="center"
+        android:gravity="center" />
+</LinearLayout>    

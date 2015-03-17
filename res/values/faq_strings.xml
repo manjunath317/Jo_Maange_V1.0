@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="question_faq_1">WHAT PRODUCTS ARE AVAILABLE THROUGH THE HOME DELIVERY SERVICE?</string>
+	<string name="answer_faq_1">We deliver Food from your favorite restaurants, Provision for your daily needs, Cakes, Flowers, Gifts, Medicines, Baby care products, Pet items, Books and a lot more. We also provide any kind of pickup and delivery, repair and delivery, bill payments and laundry service; which means almost anything.</string>
+	<string name="question_faq_2">IN WHICH AREAS DO YOU CURRENTLY HAVE THE HOME DELIVERY SERVICE?</string>
+	<string name="answer_faq_2">We currently operate in Cox town, Frazer town, Cooke town, Benson Town, Jayamahal, Sindhi Colony, MEG Officers Colony and surrounding areas..</string>
+	<string name="question_faq_3">WHAT ARE THE DELIVERY TIMINGS FOR YOUR SERVICE?</string>
+	<string name="answer_faq_3">Our delivery unit is functional between 9 am to 10.45 pm. Some items will be subject to availability and the work timings of our partners..</string>
+	<string name="question_faq_4">HOW LONG DO YOU TAKE TO DELIVER?</string>
+	<string name="answer_faq_4">JoMaange`s delivery system is uniquely designed to provide you the facility to select a convenient time to receive your purchases anytime between 9 am to 10.45 pm. You can use this feature to schedule future deliveries as well. To cater to your immediate needs, we commit to deliver items within an hour depending on the items you order..</string>
+	<string name="question_faq_5">CAN I ORDER ONLINE?</string>
+	<string name="answer_faq_5">you can call us @ 080 6688 8888 , you will be able to order online shortly.</string>
+	<string name="question_faq_6">HOW MUCH DOES THE HOME DELIVERY SERVICE COST?</string>
+	<string name="answer_faq_6">Our service is available at a convenience fee starting as low as Rs.10/Km. The good news is that we have most of the retailers in most areas listed as our partners; hence the orders from them within a set distance will continue to be free!</string>
+	<string name="question_faq_7">HOW MUCH IS YOUR MINIMUM ORDER?</string>
+	<string name="answer_faq_7">We do not have a minimum order policy. We will deliver anything you require irrespective of its cost.</string>
+	<string name="question_faq_8">HOW DO I PAY?</string>
+	<string name="answer_faq_8">You can pay us once you receive your order; currently the option is cash on delivery. In due course we will provide better and convenient modes of payments like Credit cards, Net banking, cheque payments, etc.</string>
+	<string name="question_faq_9">WHAT IS INCLUDED ON THE BILLING PAYMENT RECEIPT?</string>
+	<string name="answer_faq_9">Your billing payment receipt will include an itemized entry of each item that you ordered.</string>
+	<string name="question_faq_10">DO YOU EVER SELL MY E-MAIL ADDRESS/PH. NUMBER?</string>
+	<string name="answer_faq_10">All the information we collect via our website or through correspondence with you is used to operate and improve the service we offer you. We are committed to using your personal information only for: 
+	*	Dealing with orders and accounts for the supply of our goods and services
+	*	Planning and managing JoMaange`s business activities, including analyzing customer`s shopping habits and preferences
+	*	Providing you with information about our products and services. 
+	*	Informing you about the offers from other companies, but only with your permission.</string>
+	<string name="question_faq_11">WHAT IS YOUR DELIVERY POLICY?</string>
+	<string name="answer_faq_11">Our delivery policy is to make life easier and hassle free for our customers without compromising on the price or quality while shopping for anything and everything!!!</string>
+	<string name="question_faq_12">CAN I CHOOSE THE PLACE WHERE I WANT MY PRODUCTS FROM?</string>
+	<string name="answer_faq_12">Yes, we provide you the option to choose the place you want the products from. The convenience fee will vary depending on the delivery distance.</string>
+	<string name="question_faq_13">HOW DO I TRUST YOUR AGENTS TO MAKE DELIVERIES TO MY HOUSE?</string>
+	<string name="answer_faq_13">JoMaange has defined processes and quality checks to avoid such issues. In any case you are requested to check the order upon delivery. In case you find items missing from your order, we will offer to reorder the item. You will only need to pay for items that you have received. 
+	Please do call our customer service team to lodge a complaint, your feedback is important. We will check your order, investigate and respond to your complaint with-in 48 hrs.</string>
+	<string name="question_faq_14">I AM NOT HAPPY WITH THE QUALITY OF THE PRODUCTS THAT I HAVE RECEIVED.</string>
+	<string name="answer_faq_14">JoMaange provides delivery service and has no direct control on the quality of items or products supplied. We choose our partners by taking into consideration feedback from customers. 
+If you order from a particular restaurant/retail unit of your choice and the product/item do not meet expected standards then you can call our customer service team to report the problem. Jo Maange shall pass on the feedback to the concerned unit. JoMaange will not take liability, obligation or responsibility for any happenings but will only act as a mediator to solve the issue. In case the item/product delivered is not from the unit you specified then we will offer to replace or refund as per the policies of the restaurant / retail unit partner. 
+If you order from any restaurant/retail unit partner of JoMaange and the product/item do not meet the specified quality standards then you can call our customer service team to report the problem. JoMaange would liaise with the retail unit/Restaurant and would solve the issue amicably. If we find that the items/products did not meet the expected quality, then we will offer to replace or refund that item/product as per the policies of the restaurant / retail unit partner..</string>
+	<string name="question_faq_15">I HAVE BEEN OVERCHARGED.</string>
+	<string name="answer_faq_15">JoMaange has defined processes and quality checks to avoid such issues and include an itemized entry of every product that you ordered in your bill. However, in case of any error noticed, kindly call our customer service and we shall have the same corrected for you.</string>
+	<string name="question_faq_16">TOO MUCH TIME TAKEN TO DELIVER.</string>
+	<string name="answer_faq_16">JoMaange follows a standard process of setting the correct time expectations, depending on the kind of products or items ordered. In case the delivery is not done within the committed time period, then kindly call our customer service to lodge a complaint. Your feedback is very valuable and will help us investigate such unwanted instances and resolve the same.</string>
+	<string name="question_faq_17">PRODUCT NOT FROM THE STORE I SPECIFIED.</string>
+	<string name="answer_faq_17">In case the ordered item/product is not available at the store you specified, then we will give you an option to choose another unit or order from one of our partner stores. If the product/item delivered to you is not from the unit you specified then we will offer to replace or refund the same.</string>
+</resources>

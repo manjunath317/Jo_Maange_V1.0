@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#ffffff</color>
+    <color name="list_divider">#656565</color>
+    <color name="home_bg_color">#ebebeb</color>
+    <color name="white_common">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="menu_item_pressed">#ffffff</color>
+    <color name="form_elmnt_color">#555555</color>
+    <color name="safron">#FF9147</color>
+    <color name="action_bar_background">#E4E9ED</color>
+</resources>

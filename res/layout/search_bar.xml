@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="5dp"
+    android:background="@color/home_bg_color">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@color/white_common">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_common"
+            android:paddingTop="10dp" >
+            <AutoCompleteTextView
+                android:id="@+id/search_bar_auto_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="0.2dp"
+                android:dropDownWidth="fill_parent"
+                android:layout_marginRight="10dp"
+                android:hint="where are you?"
+                android:drawableLeft="@drawable/location_icon"
+                android:drawablePadding="10dp"
+                android:scrollHorizontally="true"
+                android:scrollbars="none"
+                android:textColor="@color/form_elmnt_color"
+                android:textSize="16sp" >
+            </AutoCompleteTextView>
+            <ProgressBar
+                android:id="@+id/progress_bar_autosuggest"
+                style="?android:attr/progressBarStyleInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/search_bar_auto_complete"
+                android:layout_alignRight="@id/search_bar_auto_complete"
+                android:layout_alignTop="@id/search_bar_auto_complete" />
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/auto_suggest_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="05dp"
+            android:background="@drawable/item_pressed" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/google_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Powered by "
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/google" />
+    </LinearLayout>
+</RelativeLayout>
