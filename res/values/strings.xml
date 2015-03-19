@@ -45,7 +45,7 @@
     <string name="add_address_label">Add Address</string>
     <string name="order_details_label">Order Details</string>
     <string name="order_placed_label">Order Placed</string>
-    <string name="city_location_search_label">Search Location</string>
+    <string name="city_location_search_label">Search by location</string>
     <string name="entity_details">Restaurant Details</string>
     <string name="cart_title">My Cart</string>
     <string name="entity_results">Search Results</string>
