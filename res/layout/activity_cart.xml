@@ -1,16 +1,125 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/home_bg_color"
-    android:orientation="vertical" >
-    <TextView
-        android:id="@+id/item_details_sub_total_text"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_common">
+    <LinearLayout
+        android:id="@+id/cart_info_layout"
         android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_pressed"
+        android:baselineAligned="true"
+        android:layout_gravity="top"
+        android:gravity="top"
+        android:orientation="horizontal">
+         <LinearLayout
+             android:id="@+id/item_details_cart_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="left"
+             android:orientation="horizontal"
+             android:background="@drawable/item_pressed"
+             android:paddingTop="7dp" >
+             <Button
+                 android:layout_width="25dp"
+                 android:layout_height="25dp"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerInParent="true"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="10dp"
+                 android:background="@drawable/cart"
+                 android:gravity="center"
+                 android:textColor="@color/form_elmnt_color"
+                 android:textSize="@dimen/body_text" />
+             <TextView
+                 android:id="@+id/cart_item_details_cart_items_qty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 Itm"
+                android:background="@drawable/item_pressed"
+                android:textStyle="bold"
+                android:textSize="@dimen/search_bar_text"
+                android:textColor="@color/safron"
+                android:gravity="left" />
+         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cart_item_details_sub_total_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="7dp">
+            <TextView
+                android:id="@+id/cart_item_details_sub_total_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Total \n ₹  0"
+                android:textSize="@dimen/search_bar_text"
+                android:textColor="@color/safron"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="7dp" >
+            <Button
+                android:id="@+id/cart_item_details_checkout_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerInParent="true"
+                 android:layout_gravity="right"
+                 android:layout_marginLeft="10dp"
+                 android:background="@drawable/item_pressed"
+                 android:gravity="center"
+                 android:text="Next"
+                 android:textColor="@color/safron"
+                 android:textSize="@dimen/body_text" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/cart_items_layout"
+        android:layout_below="@+id/cart_cart_section"
+    	android:layout_width="fill_parent"
+    	android:visibility="visible"
+    	android:layout_marginTop="60dp"
+    	android:layout_height="fill_parent">
+        <View 
+            android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/safron"/>
+    	<ListView
+		    android:id="@+id/cart_items"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
+		    android:divider="@color/home_bg_color"
+		    android:listSelector="@android:color/transparent"
+		    android:transcriptMode="alwaysScroll"
+		    android:cacheColorHint="#00000000"
+		    android:layout_margin="5dp"
+		    android:dividerHeight="0.5dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/cart_no_items_id"
+         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Total \n ₹  0"
-        android:textSize="@dimen/search_bar_text"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textSize="@dimen/big_text2"
         android:textColor="@color/form_elmnt_color"
-        android:layout_gravity="center"
-        android:gravity="center" />
-</LinearLayout>    
+        android:drawableLeft="@android:drawable/ic_dialog_alert"
+        android:drawablePadding="20dp"
+        android:text="@string/cart_no_items_label"/>
+</RelativeLayout>

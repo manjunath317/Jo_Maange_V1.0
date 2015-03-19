@@ -37,8 +37,8 @@ public class EntityDetailsTabViewHelper {
 		this.cart = CartController.getInstance();
 	}
 	
-	public void createView(Map<String, EntityTabModel> entityDetailsMap){
-		/*
+	public void createView(Map<String, EntityTabModel> entityDetailsMap1){
+		// read local file starts
 		StringBuilder sb = new StringBuilder();
 		try {
 			InputStream is = activity.getResources().openRawResource(R.drawable.hotel_details);
@@ -56,7 +56,7 @@ public class EntityDetailsTabViewHelper {
 		}
 		ServiceResponseModel respModel = EntityHelper.getEntityDetails("79");
 		Map<String, EntityTabModel> entityDetailsMap = respModel.getEntityDetailsMap();
-		*/
+		// read local file ends
 		
 		if(entityDetailsMap!=null && entityDetailsMap.size() > 0){
 			Set<String> itr = entityDetailsMap.keySet();
@@ -78,25 +78,5 @@ public class EntityDetailsTabViewHelper {
 		
 	}
 	
-	/*
-	private Map<String, EntityTabModel> setPreselectedEntityTabDetails(Map<String, EntityTabModel> entityDetailsMap){
-		try{
-			CartController cart = CartController.getInstance();
-			if(cart.getEntityItemList()!=null && cart.getEntityItemList().size() > 0){
-				List<EntityTabContentModel> cartItems = cart.getEntityItemList();
-				for(EntityTabContentModel model : cartItems){
-					model.getCategoryName()
-				}
-				Set<String> itr = entityDetailsMap.keySet();
-				for(String tabName : itr){
-				}
-			}
-			
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-		return entityDetailsMap;
-	}
-	*/
 	
 }

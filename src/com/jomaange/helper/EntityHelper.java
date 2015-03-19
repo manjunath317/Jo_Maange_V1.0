@@ -67,7 +67,9 @@ public class EntityHelper {
 				venAddInfoObj = venInfoJsonObj.getJSONObject("venAddInfo");
 				
 				// image path
-				model.setImagePath("http://jomaange.com/"+venInfoJsonObj.getString("imgPath"));
+				if(venInfoJsonObj.has("imgPath")){
+					model.setImagePath("http://"+venInfoJsonObj.getString("imgPath"));
+				}
 				
 				// vendor info
 				model.setEntityId(venInfoObj.getString("id"));
@@ -110,7 +112,7 @@ public class EntityHelper {
 		ServiceResponseModel respModel = null;
 		try{
 			DefaultHttpClient httpClient = new DefaultHttpClient();
-			HttpGet httpGet = new HttpGet(NetworkAPIURLConstant.ENTITY_DETAILS_URL+79);
+			HttpGet httpGet = new HttpGet(NetworkAPIURLConstant.ENTITY_DETAILS_URL+vendorId);
 			HttpResponse httpResponse = httpClient.execute(httpGet);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"), 8);
 			StringBuilder sb = new StringBuilder();
@@ -121,6 +123,7 @@ public class EntityHelper {
 			String response = sb.toString();
 			if(response!=null && !response.isEmpty()){
 				respModel = parseEntityDetails(response);
+				//Log.i("response", response);
 			}
 		}catch(Exception e){
 			e.printStackTrace();

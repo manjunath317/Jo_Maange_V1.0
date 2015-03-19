@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -32,7 +33,9 @@ public class EntityDetailsActivity extends Activity {
         setContentView(R.layout.activity_entity_details);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
-		
+		getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+		CartController cart = CartController.getInstance();
 		vendorName = (String) getIntent().getSerializableExtra("vendorName");
 		vendorId = (String) getIntent().getSerializableExtra("vendorId");
 		respModel = getIntent().getSerializableExtra(AppConstants.RESP_MODEL)!=null?(ServiceResponseModel)getIntent().getSerializableExtra(AppConstants.RESP_MODEL):null;
@@ -48,16 +51,20 @@ public class EntityDetailsActivity extends Activity {
         item_details_checkout_layout = (Button) findViewById(R.id.item_details_checkout_layout);
         item_details_cart_items_qty = (TextView) findViewById(R.id.item_details_cart_items_qty);
         item_details_sub_total_text = (TextView) findViewById(R.id.item_details_sub_total_text);
-        CartController cart = CartController.getInstance();
-        
+        item_details_cart_items_qty.setText(cart.getCartItemsQuantity()+"");
+        item_details_sub_total_text.setText("Sub Total \n ₹"+cart.getSubTotal());
         EntityDetailsTabViewHelper viewHelper = new EntityDetailsTabViewHelper(EntityDetailsActivity.this, EntityDetailsActivity.this, myTabHost);
-        viewHelper.createView(respModel.getEntityDetailsMap());
+        //viewHelper.createView(respModel.getEntityDetailsMap());
+        viewHelper.createView(null);
         
         item_details_cart_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             	Log.i("item_details_cart_layout", "Go to CART now");
             	Intent i = new Intent(getApplicationContext(), CartActivity.class);
+            	 i.putExtra(AppConstants.RESP_MODEL, respModel);
+                 i.putExtra("vendorName", vendorName);
+                 i.putExtra("vendorId", vendorId);
 				startActivity(i);
             }
         });
@@ -76,5 +83,21 @@ public class EntityDetailsActivity extends Activity {
 	protected void onDestroy() {
     	super.onDestroy();
 	};
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+            	onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+    	super.onBackPressed();
+    }
 
 }

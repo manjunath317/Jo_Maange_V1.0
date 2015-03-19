@@ -92,8 +92,9 @@ public class CartController {
 		Log.i("entityItemList",entityItemList.toString());
 	}
 	
-	public void editCartItem(EntityTabContentModel model){
+	public void editCartItem(EntityTabContentModel model, int quantity){
 		boolean isExist = false;
+		model.setItemQuantity(String.valueOf(quantity));
 		if(getEntityItemList()!=null && getEntityItemList().size() > 0){
 			for(int i=0;i < getEntityItemList().size() ; i++){
 				if(getEntityItemList().get(i).getItemId() == model.getItemId()){
@@ -112,6 +113,19 @@ public class CartController {
 			this.entityItemList.add(model);
 		}
 		Log.i("entityItemList",entityItemList.toString());
+	}
+	
+	public String getCartItemQuantity(EntityTabContentModel model){
+		String quantity = "0";
+		if(getEntityItemList()!=null && getEntityItemList().size() > 0){
+			for(int i=0;i < getEntityItemList().size() ; i++){
+				if(getEntityItemList().get(i).getItemId() == model.getItemId()){
+					quantity = getEntityItemList().get(i).getItemQuantity();
+					break;
+				}
+			}
+		}
+		return quantity;
 	}
 
 	public static CartController getInstance(){

@@ -43,6 +43,8 @@ public class SearchResultsActivity extends Activity {
         setContentView(R.layout.activity_search_results);
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
+		getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 		locModel = (LocationModel) getIntent().getSerializableExtra("sel_loc");
 		if(locModel!=null){
 			setTitle(locModel.getLocationName()+", Bangalore");
@@ -60,7 +62,7 @@ public class SearchResultsActivity extends Activity {
 					public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 		        		EntityModel model = entityList.get(position);
 		        		Log.i("vendor details", model.getVendor_id()  +",  "+model.getTitle());
-		        		new EntityDetailsAsync().execute(model.getVendor_id(), model.getTitle());
+		        		new EntityDetailsAsync().execute(model.getEntityId(), model.getTitle());
 					}
 				});
 			}
@@ -158,20 +160,6 @@ public class SearchResultsActivity extends Activity {
         }
     }
 	
-	@Override
-	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		switch (item.getItemId()) {
-        case android.R.id.home:
-            item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-                public boolean onMenuItemClick(MenuItem item) {
-                	onBackPressed();
-                    return true;
-                }
-            });
-		}
-        return true;
-	}
-	
 	public void toastMessage(Context context, String message){
 		Toast toast = Toast.makeText(context,message, Toast.LENGTH_LONG);
 		toast.setGravity(Gravity.CENTER, 0, 0);
@@ -179,8 +167,19 @@ public class SearchResultsActivity extends Activity {
 	}
 	
 	@Override
-	public void onBackPressed() {
-		super.onBackPressed();
-	}
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+            	onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+    	super.onBackPressed();
+    }
 	    
 }

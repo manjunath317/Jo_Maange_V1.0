@@ -17,7 +17,7 @@ import com.jomaange.activity.R;
 import com.jomaange.app.CartController;
 import com.jomaange.model.EntityTabContentModel;
 
-public class EntityDetailsItemListAdapter extends BaseAdapter {
+public class CartListAdapter extends BaseAdapter {
 	
 	private Activity activity;
     private LayoutInflater inflater;
@@ -25,10 +25,10 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
     public ImageLoader imageLoader; 
     private CartController cart;
     private TextView item_details_cart_items_qty, item_details_sub_total_text;
-    private String quantity;
     private LinearLayout entity_details_item_qty_add, entity_details_item_qty_less;
+    private String quantity;
     
-    public EntityDetailsItemListAdapter(Activity activity, List<EntityTabContentModel> entityItemList) {
+    public CartListAdapter(Activity activity, List<EntityTabContentModel> entityItemList) {
         this.activity = activity;
         this.entityItemList = entityItemList;
         imageLoader=new ImageLoader(activity.getApplicationContext());
@@ -55,7 +55,6 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
     @SuppressLint("ResourceAsColor")
 	@Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-    	
         if (inflater == null){
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
@@ -74,18 +73,16 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
         
         entity_details_item_name.setText(entityItemList.get(position).getItemName());
         entity_details_item_price.setText("Price : "+entityItemList.get(position).getItemPrice() +" ₹");
+        entity_details_item_qty.setText(entityItemList.get(position).getItemQuantity());
         
-        // setting initial value
-        String itemCount = cart.getCartItemQuantity(entityItemList.get(position));
+        String itemCount = entityItemList.get(position).getItemQuantity();
         Log.i("itemCount from cart",itemCount +" >>>>> "+entityItemList.get(position).getItemId());
-        entity_details_item_qty.setText(cart.getCartItemQuantity(entityItemList.get(position)));
         
         entity_details_item_qty_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             	try{
             		quantity = entity_details_item_qty.getText().toString();
-                	Log.i("quantity",quantity);
                 	if(quantity !=null && !quantity.isEmpty()){
                 		int qty = Integer.parseInt(quantity);
                     	qty = qty +1;
@@ -101,6 +98,7 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
                     	cart.setSubTotal(cart.getSubTotal() + Integer.parseInt(entityItemList.get(position).getItemPrice()));
                     	cart.editCartItem(entityItemList.get(position), qty);
                 	}
+                	Log.i("cart details", cart.getCartItemsQuantity() +" items, subtotal : "+cart.getSubTotal() +" Rs");
                 	if(item_details_cart_items_qty!=null)
                 	item_details_cart_items_qty.setText(cart.getCartItemsQuantity()+"");
                 	item_details_sub_total_text.setText("Sub Total\n ₹  "+cart.getSubTotal());
@@ -115,7 +113,6 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
             public void onClick(View view) {
             	try{
             		quantity = entity_details_item_qty.getText().toString();
-                	Log.i("quantity",quantity);
                 	if(quantity !=null && !quantity.isEmpty()){
                 		int qty = Integer.parseInt(quantity);
                 		if(qty > 0){
@@ -136,6 +133,7 @@ public class EntityDetailsItemListAdapter extends BaseAdapter {
                 		entity_details_item_qty.setText(qty+"");
                 		cart.removeItem(entityItemList.get(position));
                 	}
+                	Log.i("cart details", cart.getCartItemsQuantity() +" items, subtotal : "+cart.getSubTotal() +" Rs");
                 	if(item_details_cart_items_qty!=null)
                 	item_details_cart_items_qty.setText(cart.getCartItemsQuantity()+" Items");
                 	item_details_sub_total_text.setText("Sub Total\n ₹"+cart.getSubTotal());

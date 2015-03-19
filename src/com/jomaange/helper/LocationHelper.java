@@ -43,16 +43,20 @@ public class LocationHelper {
 		ServiceResponseModel respModel = new ServiceResponseModel();
 		try{
 			List<LocationModel> cityLocationList = new ArrayList<LocationModel>();
-			JSONArray locationArrayObj = new JSONArray(response);
+			JSONArray localityArrayObj = new JSONArray(response);
 			JSONObject localityObj = null;
-			JSONObject loc = null;
-			for(int i=9;i<locationArrayObj.length();i++){
-				LocationModel model = new LocationModel();
-				localityObj = new JSONObject(locationArrayObj.getString(i));
-				loc = localityObj.getJSONObject("Locality");
-				model.setLocationId(loc.getString("id"));
-				model.setLocationName(loc.getString("name"));
-				cityLocationList.add(model);
+			JSONObject localityElementObj = null;
+			for(int i=0; i<localityArrayObj.length();i++){
+				localityObj = new JSONObject(localityArrayObj.getString(i));
+				if(localityObj.has("Locality")){
+					localityElementObj = localityObj.getJSONObject("Locality");
+					LocationModel model = new LocationModel();
+					if(localityElementObj.has("id") && localityElementObj.has("name")){
+						model.setLocationId(localityElementObj.getString("id"));
+						model.setLocationName(localityElementObj.getString("name"));
+						cityLocationList.add(model);
+					}
+				}
 			}
 			if(cityLocationList!=null && cityLocationList.size() > 0){
 				respModel.setSucessFlag(true);

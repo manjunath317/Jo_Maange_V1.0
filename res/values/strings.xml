@@ -49,6 +49,7 @@
     <string name="entity_details">Restaurant Details</string>
     <string name="cart_title">My Cart</string>
     <string name="entity_results">Search Results</string>
+    <string name="cart_no_items_label">Soory! No items\nadded in your cart.</string>
     
     
     

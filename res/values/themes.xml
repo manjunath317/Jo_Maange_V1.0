@@ -14,5 +14,18 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>
+    
 
+    <style name="CustomActionBarTheme1"
+        parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBarBack</item>
+        <item name="android:textSize">@dimen/action_bar_title</item>
+    </style>
+    
+    <style name="MyActionBarBack"
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@color/white_common</item>
+        <item name="android:icon">@drawable/back_icon</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

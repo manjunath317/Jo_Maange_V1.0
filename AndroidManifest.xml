@@ -46,46 +46,55 @@
         <activity
             android:name="com.jomaange.activity.CityLocationsActivity"
             android:label="@string/choose_location_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.SearchResultsActivity"
             android:label="@string/entity_results"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.UserDetailsActivity"
             android:label="@string/tell_us_your_details_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.SMSVerificationActivity"
             android:label="@string/sms_verification_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.AddAddressActivity"
             android:label="@string/add_address_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.OrderDetailsActivity"
             android:label="@string/order_details_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.OrderConfirmActivity"
             android:label="@string/order_placed_label"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.EntityDetailsActivity"
             android:label="@string/entity_details"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.jomaange.activity.CartActivity"
             android:label="@string/cart_title"
+            android:theme="@style/CustomActionBarTheme1"
             android:screenOrientation="portrait">
         </activity>
     </application>

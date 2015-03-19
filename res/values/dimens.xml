@@ -8,5 +8,6 @@
     <dimen name="search_bar_text">14sp</dimen>
     <dimen name="small_text1">12sp</dimen>
     <dimen name="big_text1">20sp</dimen>
-
+    <dimen name="big_text2">25sp</dimen>
+    <dimen name="big_text3">30sp</dimen>
 </resources>
